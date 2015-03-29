@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gujar.myapplication.navi"
+    android:background="#ddd">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/navicover"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/cover"
+        android:scaleType="centerCrop"
+        android:paddingBottom="16dp"
+        />
+
+    <Button
+        android:id="@+id/navifood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navicover"
+        android:text="Food"
+        android:padding="16dp"
+        style="?android:attr/borderlessButtonStyle"/>
+    <Button
+        android:id="@+id/navicoffe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coffee"
+        android:padding="16dp"
+        android:layout_below="@id/navifood"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <Button
+        android:id="@+id/navidrink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Drinks"
+        android:padding="16dp"
+        android:layout_below="@id/navicoffe"
+        style="?android:attr/borderlessButtonStyle"/>
+
+
+
+</RelativeLayout>

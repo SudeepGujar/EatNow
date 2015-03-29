@@ -1,0 +1,2 @@
+include ':app', ':FloatingButton'
+project(':FloatingButton').projectDir = new File('library')

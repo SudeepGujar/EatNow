@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/loc_title_frame"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/location_title"
+                    android:background="@color/primary"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:gravity="bottom"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchbox"
+                    android:visibility="invisible"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/searchtext"
+                        android:hint="Search by Food or Venue"
+                        android:windowSoftInputMode="stateHidden"
+                        android:textColorHint="@color/white_pressed"
+                        android:textColor="@color/white"
+                        android:shadowColor="@color/white"
+                        />
+                    <Button
+                        android:id="@+id/searchbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:layout_below="@+id/searchtext"
+                        android:layout_centerHorizontal="true"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:scrollbars="vertical"
+                android:layout_below="@id/loc_title_frame"/>
+
+            </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/initial_layout">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loading_pink"
+                android:padding="16dp"
+                android:id="@+id/loadimage"
+
+                />
+            <TextView
+                android:id="@+id/load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just a moment..."
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/loadimage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Searching your nearby places"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/load"
+                />
+
+            </RelativeLayout>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/map"
+            fab:fab_colorNormal="@color/accent"
+            fab:fab_colorPressed="@color/accent_pressed"
+            fab:fab_colorRipple="@color/ripple"
+            />
+
+    </FrameLayout>
+    <fragment
+        android:id="@+id/fragmet_navi"
+        android:name="com.sudeep.gujar.eatnow.navi"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout="@layout/fragment_navi"
+        tools:layout="@layout/fragment_navi" />
+
+</android.support.v4.widget.DrawerLayout>
+    </LinearLayout>

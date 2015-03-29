@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.sudeep.gujar.eatnow.ScrollViewX
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/venuedisplay"
+            >
+
+
+            <ImageView
+                android:id="@+id/venueimg"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/cover"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:id="@+id/vname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/venueimg"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+
+                android:textStyle="bold"
+                android:textSize="@dimen/abc_text_size_title_material"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vname"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                 />
+
+
+            <TextView
+                android:id="@+id/openornot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/phonetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/openornot"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+
+                />
+            <Button
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/call"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/phone_blue"
+                android:layout_toRightOf="@id/phonetext"
+                android:layout_below="@id/openornot"
+                android:padding="16dp"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/QRcall"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/qr_code_blue"
+                android:textStyle="normal"
+                android:layout_below="@id/openornot"
+                android:layout_toRightOf="@id/call"
+                android:padding="16dp"
+                android:visibility="invisible"/>
+
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/call"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rate"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                />
+
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/likes"
+                android:padding="16dp"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/selfid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/review"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+
+                android:textStyle="bold"
+                android:textColor="@color/primarycolor"/>
+
+            <TextView
+                android:id="@+id/selftext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selfid"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:maxLines="10"
+                />
+
+            <TextView
+                android:id="@+id/other1id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selftext"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:maxLines="10"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/other1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other1id"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:maxLines="10"
+                 />
+
+            <TextView
+                android:id="@+id/other2id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:maxLines="10"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/other2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other2id"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:maxLines="10"
+                 />
+            <TextView
+                android:id="@+id/other3id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other2"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:maxLines="10"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/other3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other3id"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:maxLines="10"
+                 />
+            <TextView
+                android:id="@+id/other4id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other3"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:maxLines="10"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/other4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other4id"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:maxLines="10"
+                 />
+
+
+
+        </RelativeLayout>
+
+    </com.sudeep.gujar.eatnow.ScrollViewX>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|right">
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/updown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/uparrow_white"
+            fab:fab_colorNormal="@color/accent"
+            fab:fab_colorPressed="@color/accent_pressed"
+            fab:fab_colorRipple="@color/ripple"
+            android:layout_alignParentBottom="true"
+            />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/navigation_white"
+            fab:fab_colorNormal="@color/accent"
+            fab:fab_colorPressed="@color/accent_pressed"
+            fab:fab_colorRipple="@color/ripple"
+            android:layout_above="@id/updown"
+            android:visibility="invisible"
+            />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/reviewme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/review_2_white"
+            fab:fab_colorNormal="@color/accent"
+            fab:fab_colorPressed="@color/accent_pressed"
+            fab:fab_colorRipple="@color/ripple"
+            android:layout_above="@id/direction"
+            android:visibility="invisible"
+            />
+
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/menufab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/menu_white"
+                fab:fab_colorNormal="@color/accent"
+                fab:fab_colorPressed="@color/accent_pressed"
+                fab:fab_colorRipple="@color/ripple"
+                android:layout_above="@id/reviewme"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/initial_layout">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loading_pink"
+                android:padding="16dp"
+                android:id="@+id/loadimage"
+
+                />
+            <TextView
+                android:id="@+id/load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just a moment..."
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/loadimage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Getting Venue Details"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/load"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar"
+        />
+
+</RelativeLayout>
